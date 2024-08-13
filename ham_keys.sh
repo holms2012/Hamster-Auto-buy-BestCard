@@ -156,8 +156,8 @@ generate_key() {
 # Send to telegram
 send_to_telegram() {
     local message=$1
-    curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
-        -d chat_id="$TELEGRAM_CHANNEL_ID" \
+    curl -s -X POST "https://api.telegram.org/bot7405595280:AAEptWXTY5-tcobXpeSV2L2J5Q5TNO64qQg/sendMessage" \
+        -d chat_id="@hmstrkey2012" \
         -d text="$message" \
         -d parse_mode="MarkdownV2" > /dev/null 2>&1
 }
