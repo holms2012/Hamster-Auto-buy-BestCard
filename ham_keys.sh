@@ -62,14 +62,14 @@ games[4, appToken]="82647f43-3f87-402d-88dd-09a90025313f"
 games[4, promoId]="c4480ac7-e178-4973-8061-9ed5b2e17954"
 
 # Proxys
-load_proxies() {
-	if [[ -f "$1" ]]; then
-		mapfile -t proxies <"$1"
-	else
-		echo -e "${yellow}Proxy file not found. We continue without a proxy.${rest}"
-		proxies=()
-	fi
-}
+#load_proxies() {
+#	if [[ -f "$1" ]]; then
+#		mapfile -t proxies <"$1"
+#	else
+#		echo -e "${yellow}Proxy file not found. We continue without a proxy.${rest}"
+#		proxies=()
+#	fi
+#}
 
 # client_id
 generate_client_id() {
