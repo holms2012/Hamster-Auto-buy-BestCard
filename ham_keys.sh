@@ -61,6 +61,15 @@ games[4, name]="Train Miner"
 games[4, appToken]="82647f43-3f87-402d-88dd-09a90025313f"
 games[4, promoId]="c4480ac7-e178-4973-8061-9ed5b2e17954"
 
+games[5, name]="Merge Away"
+games[5, appToken]="8d1cc2ad-e097-4b86-90ef-7a27e19fb833"
+games[5, promoId]="dc128d28-c45b-411c-98ff-ac7726fbaea4"
+
+games[6, name]="Twerk Race 3D"
+games[6, appToken]="61308365-9d16-4040-8bb0-2f4a4c69074c"
+games[6, promoId]="61308365-9d16-4040-8bb0-2f4a4c69074c"
+
+
 # Proxys
 load_proxies() {
 	if [[ -f "$1" ]]; then
