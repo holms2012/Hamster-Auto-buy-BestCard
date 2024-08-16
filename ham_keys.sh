@@ -28,7 +28,7 @@ then
 fi
 
 clear
-echo -e "${purple}=======${yellow}-- SHJ3 -- Hamster Combat Game Keys${purple}=======${rest}"
+echo -e "${purple}=======${yellow}-- SHJ4 -- Hamster Combat Game Keys${purple}=======${rest}"
 echo ""
 echo -en "${purple}[Optional] ${green}Enter Your telegram Bot token: ${rest}"
 #read -r TELEGRAM_BOT_TOKEN
