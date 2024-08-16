@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+
 # Colors
 yellow='\033[0;33m'
 purple='\033[0;35m'
@@ -28,8 +28,7 @@ then
 fi
 
 clear
-echo -e "${purple}=======${yellow}-- SHJ4 -- Hamster Combat Game Keys${purple}=======${rest}"
-echo ""
+echo -e "${purple}=======${yellow}shj1 Combat Game Keys${purple}=======${rest}"
 echo -en "${purple}[Optional] ${green}Enter Your telegram Bot token: ${rest}"
 #read -r TELEGRAM_BOT_TOKEN
 echo -e "${purple}============================${rest}"
@@ -37,6 +36,7 @@ echo -en "${purple}[Optional] ${green}Enter Your Telegram Channel ID [example: $
 #read -r TELEGRAM_CHANNEL_ID
 echo -e "${purple}============================${rest}"
 echo -e "${green}generating ... Keys will be saved in [${yellow}my_keys.txt${green}]..${rest}"
+
 
 EVENTS_DELAY=20
 PROXY_FILE="proxy.txt"
@@ -68,7 +68,6 @@ games[5, promoId]="dc128d28-c45b-411c-98ff-ac7726fbaea4"
 games[6, name]="Twerk Race 3D"
 games[6, appToken]="61308365-9d16-4040-8bb0-2f4a4c69074c"
 games[6, promoId]="61308365-9d16-4040-8bb0-2f4a4c69074c"
-
 
 # Proxys
 load_proxies() {
@@ -171,6 +170,7 @@ send_to_telegram() {
         -d parse_mode="MarkdownV2" > /dev/null 2>&1
 }
 
+
 # key process
 generate_key_process() {
 	local app_token=$1
@@ -185,7 +185,7 @@ generate_key_process() {
 		return
 	fi
 
-	for i in {1..12}; do
+	for i in {1..15}; do
 		sleep $((EVENTS_DELAY * (RANDOM % 4 + 1) / 3))
 		has_code=$(emulate_progress "$client_token" "$promo_id" "$proxy")
 
