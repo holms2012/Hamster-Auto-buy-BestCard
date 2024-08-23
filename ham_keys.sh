@@ -37,7 +37,6 @@ echo -en "${purple}[Optional] ${green}Enter Your Telegram Channel ID [example: $
 echo -e "${purple}============================${rest}"
 echo -e "${green}generating ... Keys will be saved in [${yellow}my_keys.txt${green}]..${rest}"
 
-
 EVENTS_DELAY=20
 PROXY_FILE="proxy.txt"
 # Set bot as channel admin. and enable manage message in admin settings.
@@ -53,21 +52,33 @@ games[2, name]="Chain Cube 2048"
 games[2, appToken]="d1690a07-3780-4068-810f-9b5bbf2931b2"
 games[2, promoId]="b4170868-cef0-424f-8eb9-be0622e8e8e3"
 
-games[3, name]="My Clone Army"
-games[3, appToken]="74ee0b5b-775e-4bee-974f-63e7f4d5bacb"
-games[3, promoId]="fe693b26-b342-4159-8808-15e3ff7f8767"
+games[3, name]="Train Miner"
+games[3, appToken]="82647f43-3f87-402d-88dd-09a90025313f"
+games[3, promoId]="c4480ac7-e178-4973-8061-9ed5b2e17954"
 
-games[4, name]="Train Miner"
-games[4, appToken]="82647f43-3f87-402d-88dd-09a90025313f"
-games[4, promoId]="c4480ac7-e178-4973-8061-9ed5b2e17954"
+games[4, name]="Merge Away"
+games[4, appToken]="8d1cc2ad-e097-4b86-90ef-7a27e19fb833"
+games[4, promoId]="dc128d28-c45b-411c-98ff-ac7726fbaea4"
 
-games[5, name]="Merge Away"
-games[5, appToken]="8d1cc2ad-e097-4b86-90ef-7a27e19fb833"
-games[5, promoId]="dc128d28-c45b-411c-98ff-ac7726fbaea4"
+games[5, name]="Twerk Race 3D"
+games[5, appToken]="61308365-9d16-4040-8bb0-2f4a4c69074c"
+games[5, promoId]="61308365-9d16-4040-8bb0-2f4a4c69074c"
 
-games[6, name]="Twerk Race 3D"
-games[6, appToken]="61308365-9d16-4040-8bb0-2f4a4c69074c"
-games[6, promoId]="61308365-9d16-4040-8bb0-2f4a4c69074c"
+games[6, name]="Polysphere"
+games[6, appToken]="2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71"
+games[6, promoId]="2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71"
+
+games[7, name]="Mow and Trim"
+games[7, appToken]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
+games[7, promoId]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
+
+games[8, name]="Mud Racing"
+games[8, appToken]="8814a785-97fb-4177-9193-ca4180ff9da8"
+games[8, promoId]="8814a785-97fb-4177-9193-ca4180ff9da8"
+
+games[9, name]="My Clone Army"
+games[9, appToken]="74ee0b5b-775e-4bee-974f-63e7f4d5bacb"
+games[9, promoId]="fe693b26-b342-4159-8808-15e3ff7f8767"
 
 # Proxys
 load_proxies() {
@@ -102,7 +113,6 @@ login() {
 	)
 
 	if [[ $? -ne 0 ]]; then
-		echo "Error during login"
 		return
 	fi
 
@@ -170,7 +180,6 @@ send_to_telegram() {
         -d parse_mode="MarkdownV2" > /dev/null 2>&1
 }
 
-
 # key process
 generate_key_process() {
 	local app_token=$1
@@ -181,12 +190,11 @@ generate_key_process() {
 	client_token=$(login "$client_id" "$app_token" "$proxy")
 
 	if [[ -z "$client_token" ]]; then
-		echo "Error during login."
 		return
 	fi
 
-	for i in {1..15}; do
-		sleep $((EVENTS_DELAY * (RANDOM % 4 + 1) / 3))
+	for i in {1..55}; do
+		sleep $((EVENTS_DELAY * (RANDOM % 3 + 1) / 3))
 		has_code=$(emulate_progress "$client_token" "$promo_id" "$proxy")
 
 		if [[ "$has_code" == "true" ]]; then
@@ -203,7 +211,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..6}; do
+		for game_choice in {1..9}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
