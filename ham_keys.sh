@@ -44,13 +44,13 @@ PROXY_FILE="proxy.txt"
 
 # Games
 declare -A games
-games[1, name]="Riding Extreme 3D"
-games[1, appToken]="d28721be-fd2d-4b45-869e-9f253b554e50"
-games[1, promoId]="43e35910-c168-4634-ad4f-52fd764a843f"
+games[9, name]="Riding Extreme 3D"
+games[9, appToken]="d28721be-fd2d-4b45-869e-9f253b554e50"
+games[9, promoId]="43e35910-c168-4634-ad4f-52fd764a843f"
 
-games[2, name]="Chain Cube 2048"
-games[2, appToken]="d1690a07-3780-4068-810f-9b5bbf2931b2"
-games[2, promoId]="b4170868-cef0-424f-8eb9-be0622e8e8e3"
+games[8, name]="Chain Cube 2048"
+games[8, appToken]="d1690a07-3780-4068-810f-9b5bbf2931b2"
+games[8, promoId]="b4170868-cef0-424f-8eb9-be0622e8e8e3"
 
 games[3, name]="Train Miner"
 games[3, appToken]="82647f43-3f87-402d-88dd-09a90025313f"
@@ -72,13 +72,13 @@ games[7, name]="Mow and Trim"
 games[7, appToken]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 games[7, promoId]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 
-games[8, name]="Mud Racing"
-games[8, appToken]="8814a785-97fb-4177-9193-ca4180ff9da8"
-games[8, promoId]="8814a785-97fb-4177-9193-ca4180ff9da8"
+games[2, name]="Mud Racing"
+games[2, appToken]="8814a785-97fb-4177-9193-ca4180ff9da8"
+games[2, promoId]="8814a785-97fb-4177-9193-ca4180ff9da8"
 
-games[9, name]="My Clone Army"
-games[9, appToken]="74ee0b5b-775e-4bee-974f-63e7f4d5bacb"
-games[9, promoId]="fe693b26-b342-4159-8808-15e3ff7f8767"
+games[1, name]="My Clone Army"
+games[1, appToken]="74ee0b5b-775e-4bee-974f-63e7f4d5bacb"
+games[1, promoId]="fe693b26-b342-4159-8808-15e3ff7f8767"
 
 # Proxys
 load_proxies() {
