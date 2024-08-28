@@ -28,7 +28,8 @@ then
 fi
 
 clear
-echo -e "${purple}=======${yellow}shj3 Combat Game Keys${purple}=======${rest}"
+echo -e "${purple}=======${yellow}Hamster Combat Game Keys${purple}=======${rest}"
+echo ""
 echo -en "${purple}[Optional] ${green}Enter Your telegram Bot token: ${rest}"
 #read -r TELEGRAM_BOT_TOKEN
 echo -e "${purple}============================${rest}"
@@ -44,13 +45,13 @@ PROXY_FILE="proxy.txt"
 
 # Games
 declare -A games
-games[9, name]="Riding Extreme 3D"
-games[9, appToken]="d28721be-fd2d-4b45-869e-9f253b554e50"
-games[9, promoId]="43e35910-c168-4634-ad4f-52fd764a843f"
+games[8, name]="Riding Extreme 3D"
+games[8, appToken]="d28721be-fd2d-4b45-869e-9f253b554e50"
+games[8, promoId]="43e35910-c168-4634-ad4f-52fd764a843f"
 
-games[8, name]="Chain Cube 2048"
-games[8, appToken]="d1690a07-3780-4068-810f-9b5bbf2931b2"
-games[8, promoId]="b4170868-cef0-424f-8eb9-be0622e8e8e3"
+games[6, name]="Chain Cube 2048"
+games[6, appToken]="d1690a07-3780-4068-810f-9b5bbf2931b2"
+games[6, promoId]="b4170868-cef0-424f-8eb9-be0622e8e8e3"
 
 games[3, name]="Train Miner"
 games[3, appToken]="82647f43-3f87-402d-88dd-09a90025313f"
@@ -64,21 +65,17 @@ games[5, name]="Twerk Race 3D"
 games[5, appToken]="61308365-9d16-4040-8bb0-2f4a4c69074c"
 games[5, promoId]="61308365-9d16-4040-8bb0-2f4a4c69074c"
 
-games[6, name]="Polysphere"
-games[6, appToken]="2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71"
-games[6, promoId]="2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71"
+games[2, name]="Polysphere"
+games[2, appToken]="2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71"
+games[2, promoId]="2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71"
 
 games[7, name]="Mow and Trim"
 games[7, appToken]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 games[7, promoId]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 
-games[2, name]="Mud Racing"
-games[2, appToken]="8814a785-97fb-4177-9193-ca4180ff9da8"
-games[2, promoId]="8814a785-97fb-4177-9193-ca4180ff9da8"
-
-games[1, name]="My Clone Army"
-games[1, appToken]="74ee0b5b-775e-4bee-974f-63e7f4d5bacb"
-games[1, promoId]="fe693b26-b342-4159-8808-15e3ff7f8767"
+games[1, name]="Mud Racing"
+games[1, appToken]="8814a785-97fb-4177-9193-ca4180ff9da8"
+games[1, promoId]="8814a785-97fb-4177-9193-ca4180ff9da8"
 
 # Proxys
 load_proxies() {
@@ -179,7 +176,6 @@ send_to_telegram() {
         -d text="$message" \
         -d parse_mode="MarkdownV2" > /dev/null 2>&1
 }
-
 # key process
 generate_key_process() {
 	local app_token=$1
@@ -211,7 +207,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..9}; do
+		for game_choice in {1..8}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
