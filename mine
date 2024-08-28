@@ -1,0 +1,12 @@
+#33_read -r TELEGRAM_BOT_TOKEN
+#36_read -r TELEGRAM_CHANNEL_ID
+
+# Send to telegram
+send_to_telegram() {
+    local message=$1
+    curl -s -X POST "https://api.telegram.org/bot7405595280:AAEptWXTY5-tcobXpeSV2L2J5Q5TNO64qQg/sendMessage" \
+        -d chat_id="@hmstrkey2012" \
+        -d text="$message" \
+        -d parse_mode="MarkdownV2" > /dev/null 2>&1
+}
+
