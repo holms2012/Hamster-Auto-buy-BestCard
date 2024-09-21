@@ -28,7 +28,7 @@ then
 fi
 
 clear
-echo -e "${purple}=======${yellow}SHJ2_Hamster Combat Game Keys${purple}=======${rest}"
+echo -e "${purple}=======${yellow}Hamster Combat Game Keys${purple}======= ${yellow} SHJ_1${rest}"
 echo ""
 echo -en "${purple}[Optional] ${green}Enter Your telegram Bot token: ${rest}"
 #read -r TELEGRAM_BOT_TOKEN
@@ -72,6 +72,46 @@ games[6, promoId]="2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71"
 games[7, name]="Mow and Trim"
 games[7, appToken]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 games[7, promoId]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
+
+games[8, name]="Fluff Crusade"
+games[8, appToken]="112887b0-a8af-4eb2-ac63-d82df78283d9"
+games[8, promoId]="112887b0-a8af-4eb2-ac63-d82df78283d9"
+
+games[9, name]="Tile Trio"
+games[9, appToken]="e68b39d2-4880-4a31-b3aa-0393e7df10c7"
+games[9, promoId]="e68b39d2-4880-4a31-b3aa-0393e7df10c7"
+
+games[10, name]="Stone Age"
+games[10, appToken]="04ebd6de-69b7-43d1-9c4b-04a6ca3305af"
+games[10, promoId]="04ebd6de-69b7-43d1-9c4b-04a6ca3305af"
+
+games[11, name]="Bouncemasters"
+games[11, appToken]="bc72d3b9-8e91-4884-9c33-f72482f0db37"
+games[11, promoId]="bc72d3b9-8e91-4884-9c33-f72482f0db37"
+
+games[12, name]="Hide Ball"
+games[12, appToken]="4bf4966c-4d22-439b-8ff2-dc5ebca1a600"
+games[12, promoId]="4bf4966c-4d22-439b-8ff2-dc5ebca1a600"
+
+games[13, name]="Pin Out Master"
+games[13, appToken]="d2378baf-d617-417a-9d99-d685824335f0"
+games[13, promoId]="d2378baf-d617-417a-9d99-d685824335f0"
+
+games[14, name]="Count Masters"
+games[14, appToken]="4bdc17da-2601-449b-948e-f8c7bd376553"
+games[14, promoId]="4bdc17da-2601-449b-948e-f8c7bd376553"
+
+games[15, name]="Infected Frontier"
+games[15, appToken]="eb518c4b-e448-4065-9d33-06f3039f0fcb"
+games[15, promoId]="eb518c4b-e448-4065-9d33-06f3039f0fcb"
+
+games[16, name]="Among Water"
+games[16, appToken]="daab8f83-8ea2-4ad0-8dd5-d33363129640"
+games[16, promoId]="daab8f83-8ea2-4ad0-8dd5-d33363129640"
+
+games[17, name]="Factory World"
+games[17, appToken]="d02fc404-8985-4305-87d8-32bd4e66bb16"
+games[17, promoId]="d02fc404-8985-4305-87d8-32bd4e66bb16"
 
 # Proxys
 load_proxies() {
@@ -173,6 +213,7 @@ send_to_telegram() {
         -d parse_mode="MarkdownV2" > /dev/null 2>&1
 }
 
+
 # key process
 generate_key_process() {
 	local app_token=$1
@@ -204,7 +245,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..7}; do
+		for game_choice in {1..17}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
